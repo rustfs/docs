@@ -1,0 +1,110 @@
+/**
+  主题变量样式修改
+**/
+/* :root {
+  --vp-c-brand: #656dff;
+  --vp-c-brand-light: #757cff;
+} */
+  
+/**
+  顶部导航模块样式修改
+**/
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+}
+body{
+  position: relative;
+  background-color:#fff !important;
+}
+.Layout{
+  margin-top:-50px !important;
+  display: flex;
+  flex-direction:row !important;
+  justify-content: center;
+  position: relative;
+}
+.VPSkipLink{
+  display: none;
+}
+.VPNav {
+  visibility:hidden;
+  position: absolute !important;
+  .content{
+    padding:0 !important;
+  }
+  .title{
+    position: absolute !important;
+  }
+  .search{
+    visibility:visible;
+    z-index:999;
+    left: 20% !important;
+    top:-120px !important;
+    position: relative;
+    .nav-search-btn-wait{
+      width: 400px !important;
+      justify-content:flex-start;
+      .search-tip{
+        flex-grow: 1;
+      }
+    }
+  }
+}
+          
+      
+
+.VPSidebar{
+  position: relative !important;
+  width: 310px !important;
+  z-index: 1 !important;
+  padding-top:120px !important;
+  background-color: #fff !important;
+  padding-left:30px !important;
+  .curtain{
+    background-color: #fff !important;
+  }
+  .nav{
+    .VPSidebarItem{
+      h2{
+        font-size: .9375rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.aside-container {
+  position: relative !important;
+}
+.VPContent{
+  padding-left:0 !important;
+  padding-right:0 !important;
+  flex-grow: 0 !important;
+  width:910px !important;
+  
+  margin-top:20px !important;
+  .container{
+    position:relative;
+    padding:0;
+    .aside{
+      position:absolute !important;
+      right:-260px;
+      top:-80px;
+      .content{
+        padding:0 1rem !important;
+      }
+    }
+    .content{
+      padding:0 !important;
+      .content-container{
+        max-width: 910px;
+      }
+    }
+  }
+}
+.VPDocFooter{
+  .prev-next{
+    margin-bottom: 20px;
+    min-width:846px;
+  }
+}

@@ -35,7 +35,7 @@ jobs:
     - name: ls,pwd
       run: |
         cd docs/.vitepress/
-        tar vitepress.tar.gz  ./  
+        tar -zcvf vitepress.tar.gz  ./  
         ls
 
   

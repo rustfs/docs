@@ -42,7 +42,6 @@ jobs:
     - name: pwd
       run: |
         pwd
-        cd ./docs/
         ls -al
 
 
@@ -54,7 +53,7 @@ jobs:
         user: ${{ secrets.MY_USER }}
         pass: ${{ secrets.MY_PWD }}
         port: 22
-        local-path: ./docs/
+        local-path: ./
         remote-path: ${{ secrets.ECS_PAHT }}
 
 

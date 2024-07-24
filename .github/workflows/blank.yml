@@ -33,6 +33,7 @@ jobs:
         npm run test --if-present
         pwd
         ls -al
+        tar -zcvf ./* docs.tar.gz
   
 # deploy:
 #   runs-on: ubuntu-latest

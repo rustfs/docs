@@ -47,7 +47,7 @@ export default defineConfig({
         {
           text: 'Rustfs Kubernetes中文文档目录2',
           items: [
-            { text: '首页', link: '/k8s/original/' },
+            { text: '测试', link: '/k8s/original/test' },
           ]
         },
       ],

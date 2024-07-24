@@ -87,7 +87,8 @@ export default defineConfig({
         {
           text: 'Rustfs Container中文文档',
           items: [
-            { text: '首页', link: '/docker/' }
+            { text: '首页', link: '/docker/' },
+            { text: '测试', link: '/docker/test' }
           ]
         }
       ],

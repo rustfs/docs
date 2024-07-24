@@ -8,13 +8,6 @@ on:
   push:
     branches: [ "main" ]
 
-env:
-  ECS_SERVER: MY_SERVER           # set this to your Amazon ECR repository name
-  ECS_USER: MY_USER                 # set this to your Amazon ECS service name
-  ECS_PWD: MY_PWD                # set this to your Amazon ECS cluster name
-  ECS_PAHT: MY_PATH # set this to the path to your Amazon ECS task definition
-  
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 
 jobs:
@@ -55,12 +48,12 @@ jobs:
       # uses: danhendrickson/sftp-transfer-action@531b97c11ad67e7e242e2cf98cb16c3849544f58
       uses: danhendrickson/sftp-transfer-action@v2023.51.2
       with:
-        server: ${{ env.MY_SERVER }}
-        user: ${{ env.MY_USER }}
-        pass: ${{ env.MY_PWD }}
+        server: ${{ secrets.MY_SERVER }}
+        user: ${{ secrets.MY_USER }}
+        pass: ${{ secrets.MY_PWD }}
         port: 22
         local-path: ./
-        remote-path: ${{ env.ECS_PAHT }}
+        remote-path: ${{ secrets.ECS_PAHT }}
 
 
 

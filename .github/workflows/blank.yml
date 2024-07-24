@@ -42,6 +42,7 @@ jobs:
     
     - name: pwd
       run: |
+        cd docs/.vitepress/dist
         pwd
         ls -al
 

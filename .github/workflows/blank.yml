@@ -34,9 +34,9 @@ jobs:
         
     - name: ls,pwd
       run: |
-        cd docs/
+        cd docs/.vitepress/
+        tar vitepress.tar.gz  ./  
         ls
-        pwd
 
   
 # deploy:

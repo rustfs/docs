@@ -32,22 +32,17 @@ jobs:
         npm ci
         npm run docs:build
         
-    - name: ls,pwd
-      run: |
-        cd docs/.vitepress/
-        tar -zcvf vitepress.tar.gz  ./  
-        ls
 
   
-# deploy:
-#   runs-on: ubuntu-latest
-#   needs: build
+deploy:
+    runs-on: ubuntu-latest
+    needs: build
 
-#    steps:
-#    - name: pwd
-#      run: |
-#        pwd
-#        ls -al
+    steps:
+    - name: pwd
+      run: |
+        pwd
+        ls -al
 
 
 #   - name: SFTP Transfer

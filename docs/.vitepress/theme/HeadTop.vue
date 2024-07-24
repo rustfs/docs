@@ -1,8 +1,7 @@
 <template>
       <header :class="{ 'header-bg' : scrollYGt100 }">
       <div id="header">
-        <a href="/" class="logo"><img src="/images/logo2.svg" class="logo" alt="RustFS首页"></a>
-        
+        <a href="https://rustfs.com/" class="logo"><img src="/images/logo2.svg" class="logo" alt="RustFS首页"></a>
         <div class="container">
           <div class="menu">
             <div class="login-btn">

@@ -1,0 +1,63 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    name: deploy to staging
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm run build --if-present
+        npm run test --if-present
+        pwd
+        ls -al
+  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: pwd
+      run: |
+        pwd
+        ls -al
+
+
+    - name: SFTP Transfer
+      # uses: danhendrickson/sftp-transfer-action@531b97c11ad67e7e242e2cf98cb16c3849544f58
+      uses: danhendrickson/sftp-transfer-action@v2023.51.2
+      with:
+        server: ${{ secrets.MY_SERVER }}
+        user: ${{ secrets.MY_USER }}
+        pass: ${{ secrets.MY_PWD }}
+        port: 22
+        local-path: ./
+        remote-path: ${{ secrets.ECS_PAHT }}
+
+
+
+    
+
+

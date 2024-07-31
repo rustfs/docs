@@ -3,9 +3,9 @@
 layout: home
 pagefind-indexed: false
 hero:
-  name: "rustfs 中文文档"
-  text: "rustfs 中文文档"
-  tagline: restfs 中文文档
+  name: "RustFS 中文文档"
+  text: "RustFS 中文文档"
+  tagline: RustFS 中文文档
   image:
     src: /images/logo2.svg
     alt: VitePress

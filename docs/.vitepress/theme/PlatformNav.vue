@@ -28,11 +28,13 @@
     let navIndex = ref();
     let subNavIndex = ref();
     const platformNav = reactive([
+        /*
         {
             'title' :'Kubernetes',
             'img' : '/docs/images/kubernetes-inactive.svg',
             'link' : '/docs/k8s/original/'
         },
+        */
         {
             'title' :'Docker',
             'img' : '/docs/images/docker-inactive.svg',
@@ -89,10 +91,12 @@
         }
     }
     const subNav =  reactive([
+        
         {
             'title' :'原生Kubernetes',
             'link' : '/docs/k8s/original/'
         },
+        
         {
             'title' :'红帽Openshift',
             'link' : '/docs/k8s/openshift/'

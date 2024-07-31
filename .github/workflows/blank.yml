@@ -49,19 +49,18 @@ jobs:
         assets: |
             docs/.vitepress/dist/**:/docs/
 
-
-
-    - name: Run deploy
-      uses: tiyee/aliyun-oss-auto-upload@v2.0.0
-      with:
-        region: oss-cn-beijing
-        access-key-id: ${{ secrets.ALICLOUDOSS_KEY_ID }}
-        access-key-secret: ${{ secrets.ALICLOUDOSS_KEY_SECRET }}
-        bucket: rustfs
-        secure: true
-        local-folder: docs/.vitepress/dist/ # local folder
-        remote-dir: /docs/
-        timeout: 600000
+#    存在bug，只能上传部份文件，先预留
+#    - name: Run deploy
+#      uses: tiyee/aliyun-oss-auto-upload@v2.0.0
+#      with:
+#        region: oss-cn-beijing
+#        access-key-id: ${{ secrets.ALICLOUDOSS_KEY_ID }}
+#        access-key-secret: ${{ secrets.ALICLOUDOSS_KEY_SECRET }}
+#        bucket: rustfs
+#        secure: true
+#        local-folder: docs/.vitepress/dist/ # local folder
+#        remote-dir: /docs/
+#        timeout: 600000
 
 
 

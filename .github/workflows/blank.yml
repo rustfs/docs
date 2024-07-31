@@ -47,7 +47,7 @@ jobs:
         access-key-secret: ${{ secrets.ALICLOUDOSS_KEY_SECRET }}
         bucket: rustfs
         secure: true
-        local-folder: docs/.vitepress/dist # local folder
+        local-folder: docs/.vitepress/dist/ # local folder
         remote-dir: /docs/
 
 
@@ -57,17 +57,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: ruslt
+    - name: result
     - run: |
         ls
         pwd
         echo "success"
-
-        
-    
-  
-
-
-    
-
 

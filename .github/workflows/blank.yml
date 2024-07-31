@@ -49,17 +49,9 @@ jobs:
         secure: true
         local-folder: docs/.vitepress/dist/ # local folder
         remote-dir: /docs/
+        timeout: 600000
 
 
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: result
-    - run: |
-        ls
-        pwd
-        echo "success"
+
 

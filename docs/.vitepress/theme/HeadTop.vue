@@ -234,9 +234,9 @@
             <li class="link"><a href="javascript:;">博客</a></li>
             <li class="link"><a href="javascript:;">技术文档</a></li>
             -->
-            <li class="link"><a href="https://rustfs.com/html/product-AI.html">AI支持</a></li>
-            <li class="link"><a href="https://rustfs.com/html/product-dataLake.html">数据湖</a></li>
-            <li class="link"><a href="https://rustfs.com/html/price.html">价格</a></li>
+            <li class="link"><a target="_self" href="https://rustfs.com/html/product-AI.html">AI支持</a></li>
+            <li class="link"><a target="_self" href="https://rustfs.com/html/product-dataLake.html">数据湖</a></li>
+            <li class="link"><a target="_self" href="https://rustfs.com/html/price.html">价格</a></li>
           </ul>
         </div>
       </div>

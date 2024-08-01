@@ -91,6 +91,7 @@
         }
     }
     const subNav =  reactive([
+        /*
         
         {
             'title' :'原生Kubernetes',
@@ -113,6 +114,7 @@
             'title' :'微软AKS',
             'link' : '/docs/k8s/aks/'
         },
+        */
     ])
     initNavIndex()
     initSubNavIndex()

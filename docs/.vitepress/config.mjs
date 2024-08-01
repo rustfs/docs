@@ -7,6 +7,7 @@ export default defineConfig({
   description: 'rustfs 中文文档',
   lang: 'zh-cn',
   base: '/docs/',
+  cleanUrls: false,
   appearance: false,
   vite: {
     plugins: [
